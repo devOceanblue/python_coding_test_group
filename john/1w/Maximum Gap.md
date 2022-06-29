@@ -38,7 +38,7 @@ class Solution:
 * Runtime: 1497 ms, faster than 55.43% of Python3 online submissions for Maximum Gap.
 * Memory Usage: 28.1 MB, less than 69.96% of Python3 online submissions for Maximum Gap.
 
-일단 이렇게 해결할 경우에는 시간 복잡도는 Tim sort로 인해서 
+일단 이렇게 해결할 경우에는 시간 복잡도는 Tim sort로 인해서  
 O(nlogn)이라고 생각하고 공간복잡도의 경우에는 O(n/2)라고 생각했다.
 
 이렇게 쉬운게 Hard난이도일리 없는데 하면서, 해당 문제의 Tag를 확인했고,
