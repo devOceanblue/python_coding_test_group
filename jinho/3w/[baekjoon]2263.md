@@ -1,3 +1,25 @@
+# 아이디어
+
+postorder의 경우 left -> right -> root
+
+inorder  
+<img src='https://upload.wikimedia.org/wikipedia/commons/4/48/Inorder-traversal.gif'>
+postorder   
+<img src = 'https://upload.wikimedia.org/wikipedia/commons/2/28/Postorder-traversal.gif'>
+
+inorder :  left -> root -> right
+| A | B | C | D | E | F | G | H | I       |
+| -- | :--: | -- | -- | -- | -- | -- | -- | -- |
+| left  |||||                    root   ||right|
+
+
+
+postorder : left -> right -> root
+
+| A | C | E | D | B | H | I | G | F       |
+| -- | :--: | -- | -- | -- | -- | -- | -- | -- |
+| left  |||||                    right   |||root|
+
 # 첫 시도
 ``` python
 import sys
