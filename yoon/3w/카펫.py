@@ -1,3 +1,9 @@
+"""
+아이디어:
+제곱근을 시작점으로 하면 모두 돌 필요가 없음
+"""
+
+
 import math
 from math import sqrt
 
