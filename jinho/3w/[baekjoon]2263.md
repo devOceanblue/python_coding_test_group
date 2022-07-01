@@ -1,4 +1,4 @@
-# 아이디어
+
 
 postorder의 경우 left -> right -> root
 
@@ -7,18 +7,48 @@ inorder
 postorder   
 <img src = 'https://upload.wikimedia.org/wikipedia/commons/2/28/Postorder-traversal.gif'>
 
-inorder :  left -> root -> right
-| A | B | C | D | E | F | G | H | I       |
-| -- | :--: | -- | -- | -- | -- | -- | -- | -- |
-| left  |||||                    root   ||right|
 
 
 
-postorder : left -> right -> root
 
-| A | C | E | D | B | H | I | G | F       |
-| -- | :--: | -- | -- | -- | -- | -- | -- | -- |
-| left  |||||                    right   |||root|
+<img src ="https://user-images.githubusercontent.com/62232531/176799653-5e8b82a6-bf27-48c4-b0f4-7c5d19df0f73.png">
+inorder 결과값을 이용하여 preorder을 구해보자
+
+
+## Step 1 - 트리의 루트(F)의 왼쪽 자식, 오른쪽 자식 찾기  
+<img src="https://user-images.githubusercontent.com/62232531/176800047-e3785017-3d59-4999-8a3e-2059086a9f28.png">
+
+## Step 2 - 왼쪽 서브트리의 루트(B)의 왼쪽, 오른쪽 자식 찾기  
+<img src = "https://user-images.githubusercontent.com/62232531/176800450-7e670f05-6066-419e-b9cc-5409b4065bf6.png">
+
+## Step 3 - 오른쪽 서브트리의 루트(D)의 왼쪽, 오른쪽 자식 찾기  
+<img src = "https://user-images.githubusercontent.com/62232531/176800919-da019a62-ddd9-4474-806d-3d2214e2aa2a.png">
+
+##  모든 노드를 탐색할때까지 반복..
+
+## 아이디어 - inorder 결과값을 이용하여 preorder 출력
+1. 트리의 루트를 출력하자  (root)
+2. 왼쪽트리의 루트를 출력하자 (left)
+3. 오른쪽트리의 루트를 출력하자 (right)
+
+
+## inorder의 루트 인덱스 찾기
+``` python
+inorder_idx = {}
+for idx,number in enumerate(inorders):
+    inorder_idx[number] = idx
+```
+트리의 postorder 마지막 결과값이 `root`라는 것을 이용  
+inorder_idx[root] => 해당 트리의 root 인덱스
+
+## inorder과 postorder 비교
+<img src = "https://user-images.githubusercontent.com/62232531/176801976-8cb1b8c7-3793-495c-bb55-96b60b74472f.png">
+왼쪽 자식의 경우 위치는 그래도지만 오른쪽 자식의 경우 1칸 당겨짐 -> depth 만큼 반복됨
+
+
+
+
+
 
 # 첫 시도
 ``` python
