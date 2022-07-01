@@ -39,7 +39,7 @@ for idx,number in enumerate(inorders):
     inorder_idx[number] = idx
 ```
 트리의 postorder 마지막 결과값이 `root`라는 것을 이용  
-inorder_idx[root] => 해당 트리의 root
+inorder_idx[root] => 해당 트리의 root 인덱스
 
 ## inorder과 postorder 비교
 <img src = "https://user-images.githubusercontent.com/62232531/176801976-8cb1b8c7-3793-495c-bb55-96b60b74472f.png">
