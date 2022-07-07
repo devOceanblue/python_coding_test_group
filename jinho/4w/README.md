@@ -36,10 +36,11 @@ for _ in range(M):
 
 
 # 2차원 문제
-S[a][b] = (0,0) 에서 (a,b) 까지의 합
+S[a][b] = (0,0) 에서 (a,b) 까지의 합(직사각형)
+prefix_sum을 이용하여 계산해보자
 
-# 합 로직 구하기
-
+# 아이디어
+<img src = "https://user-images.githubusercontent.com/62232531/177738341-1c58417b-7533-4538-b537-4646fa4f356a.png">
 
 
 
