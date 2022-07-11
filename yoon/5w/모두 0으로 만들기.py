@@ -21,8 +21,8 @@ def solution(a, edges):
     for i, j in edges:
         tree[i].append(j)
         tree[j].append(i)
-    visited = [0] * len(a)
-    dfs(0, a, tree, visited)
+    visited = [0 for _ in range(len(a))]
+    dfs(x=0, a=a, tree=tree, visited=visited)
     return answer
 
 
