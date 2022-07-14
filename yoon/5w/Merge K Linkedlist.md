@@ -7,6 +7,7 @@ https://leetcode.com/problems/merge-k-sorted-lists/solution/
 삽입정렬을 사용하여 간단하게 해결할수 있다.
 
 
+<img width="587" alt="스크린샷 2022-07-14 오후 1 54 18" src="https://user-images.githubusercontent.com/87791365/178902422-b38b1854-6b5b-4cfd-a7aa-2a3ca8a4c14c.png">
 
 
 ```python
