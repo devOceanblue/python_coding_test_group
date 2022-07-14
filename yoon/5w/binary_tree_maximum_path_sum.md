@@ -4,7 +4,7 @@ https://leetcode.com/problems/binary-tree-maximum-path-sum/solution/
 # 아이디어
 
 재귀(Recursion)를 사용해서 현재 노드를 중심으로 경로의 최댓값을 찾는다.  
-그리고 현재노드 + 왼쪽 또는 현재노드 + 오른쪽 경로의 최댓값을 리턴해서 부모노드에게 반환한다.  
+현재노드 + 왼쪽 또는 현재노드 + 오른쪽 경로의 최댓값을 리턴해서 부모노드에게 반환한다.  
 
 <img width="254" alt="스크린샷 2022-07-14 오후 1 19 19" src="https://user-images.githubusercontent.com/87791365/178898075-e3070f87-1614-47d4-aa3a-3e9844e29092.png">
 <img width="252" alt="스크린샷 2022-07-14 오후 1 19 23" src="https://user-images.githubusercontent.com/87791365/178898083-cc9dd604-5068-4c7d-bce7-de86530bd544.png">
