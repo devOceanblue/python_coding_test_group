@@ -1,3 +1,0 @@
-# Study-Algorithm
-## Java
-## Python
