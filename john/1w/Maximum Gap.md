@@ -46,7 +46,7 @@ Bucket Sort인것을 확인하고 그것에 대해 알아봤다.
 
 ## Bucket Sort
 
-![image](https://imgur.com/bf8nVZt)
+![image](https://media.geeksforgeeks.org/wp-content/uploads/BucketSort.png)
 
 * 데이터 𝑛개가 주어졌을 때 데이터의 범위를 𝑛개로 나누고 이에 해당하는 𝑛개의 버킷을 만든다.
 * 각각의 데이터를 해당하는 버킷에 집어 넣는다. (C 등에서는 연결리스트를 사용하며 새로운 데이터는 연결리스트의 head에 insert한다)
