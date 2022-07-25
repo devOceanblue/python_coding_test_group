@@ -45,6 +45,7 @@ class Solution:
 ### Monotonic Stack
 
 스택의 top에 있는 숫자와 새롭게 들어오는 숫자를 비교하고, 경우에 따라 pop하며 진행
+
 * **중복없는 오름차순 스택**인경우, 들어가려는 수가 top 보다 작거나 같은 경우 오름차순을 만족할 때까지 pop을 반복 한 후 push.
 * **중복없는 내림차순 스택**인경우, 들어가려는 수가 top 보다 크거나 같은 경우 내림차순을 만족할 때까지 pop을 반복한 후 push.
 
@@ -79,7 +80,7 @@ print(stack)
 [5, 10, 15, 20]
 ```
 
-![](largestRectangleArea/IMG_A6154D1A362D-1.jpeg)
+![largestRectangleArea](largestRectangleArea/IMG_A6154D1A362D-1.jpeg)
 
 조금 더 간단히 설명하기 위해서 예시로 든 그림이다.  
 monotonic stack으로 구한 값과 각 index를 구할수 있으면 세로로 펼쳐진 초록색 사각형의 넓이를 구할수 있고,  
@@ -146,7 +147,7 @@ class Solution:
 시간 복잡도의 경우 O(n log n)이 될 것이고, 공간복잡도의 경우엔 O(log n)이 될것이라고 생각한다.
 
 다만 이 경우도 Timeout이 났는데, 똑같은 테스트케이스에서 에러가 발생했다.
-https://leetcode.com/submissions/detail/737244885/testcase/
+<https://leetcode.com/submissions/detail/737244885/testcase/>
 
 아마 이 케이스가 추가되기 이전 풀이인거같다.
 

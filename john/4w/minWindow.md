@@ -5,9 +5,9 @@
 [Minimum Window Substring - LeetCode](https://leetcode.com/problems/minimum-window-substring/)
 
 * Tag
-	* Hash Table
-	* String
-	* Sliding Window
+  * Hash Table
+  * String
+  * Sliding Window
 * Acceptable : 39.4%
 * Difficulty : Hard
 
@@ -30,6 +30,7 @@ Since the largest window of s only has one 'a', return empty string.
 ```
 
 ## Solution
+
 Streaming 환경에서 사실 window의 개념은 하루이틀 보는게 아니였다.
 
 [Windows | Apache Flink](https://nightlies.apache.org/flink/flink-docs-master/docs/dev/datastream/operators/windows/#sliding-windows)
@@ -50,12 +51,12 @@ j가 늘어날때마다 Counter로 세었던 각 요소들을 -1하면서 카운
 지금까지 설명한 것을 다시 정리하면
 
 * Counter를 이용, t값의 각 요소의 개수를 확인한다.
-	* ex) t="ABC"
-		* Counter({'B': 1, 'C': 1, 'A': 1})
-		* missing = len(t)
+  * ex) t="ABC"
+    * Counter({'B': 1, 'C': 1, 'A': 1})
+    * missing = len(t)
 * i, j = 현재 슬라이딩, start, end = 슬라이딩 윈도우의 최소값이며, 더 작은 차이가 발생할 경우 갱신한다.
 * 각 요소가 들어갈때마다missing--를 하고, 전부 들어갔다고 판단(missing == 0)되면 좌측 슬라이딩 윈도우를 땡긴다.
-	* 기본적으로 j, end는 우측 슬라이드, i, start는 좌측 슬라이드이다.
+  * 기본적으로 j, end는 우측 슬라이드, i, start는 좌측 슬라이드이다.
 
 ```python
 class Solution:
