@@ -1,36 +1,37 @@
-from typing import List
-
-
 class Solution:
-    def isValidSudoku(self, board: List[List[str]]) -> bool:
-        N = 9
+    def isValidSudoku(self, board) -> bool:
 
-        # Use hash set to record the status
-        rows = [set() for _ in range(N)]
-        cols = [set() for _ in range(N)]
-        boxes = [set() for _ in range(N)]
+        # check if there any same number in a row
+        for row in board:
+            elem = []
+            for j in row:
+                if j != ".":
+                    if j in elem:
 
-        for r in range(N):
-            for c in range(N):
-                val = board[r][c]
-                # Check if the position is filled with number
-                if val == ".":
-                    continue
+                        return False
+                    else:
+                        elem.append(j)
 
-                # Check the row
-                if val in rows[r]:
+        # check if there any same number in a column
+        for i in range(len(board)):
+            elem = []
+            for j in range(9):
+                if board[j][i] not in elem and board[j][i] != ".":
+                    elem.append(board[j][i])
+                elif board[j][i] != ".":
                     return False
-                rows[r].add(val)
 
-                # Check the column
-                if val in cols[c]:
-                    return False
-                cols[c].add(val)
-
-                # Check the box
-                idx = (r // 3) * 3 + c // 3
-                if val in boxes[idx]:
-                    return False
-                boxes[idx].add(val)
+        # check if there any same number in a 3*3 box
+        # run for 3 rows at a time
+        for i in range(0, 9, 3):
+            # run for 3 cols at a time
+            for j in range(0, 9, 3):
+                elem = []
+                for k in range(i, i + 3):
+                    for l in range(j, j + 3):
+                        if board[k][l] not in elem and board[k][l] != ".":
+                            elem.append(board[k][l])
+                        elif board[k][l] != ".":
+                            return False
 
         return True
